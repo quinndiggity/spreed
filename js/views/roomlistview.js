@@ -339,9 +339,9 @@
 
 					$('#emptycontent-icon').find('.avatar').each(function () {
 						if (waitingParticipantName && (waitingParticipantId !== waitingParticipantName)) {
-							$(this).avatar(waitingParticipantId, 128, undefined, false, undefined, waitingParticipantName);
+							$(this).avatar(waitingParticipantId, 256, undefined, false, undefined, waitingParticipantName);
 						} else {
-							$(this).avatar(waitingParticipantId, 128);
+							$(this).avatar(waitingParticipantId, 256);
 						}
 					});
 

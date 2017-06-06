@@ -449,9 +449,9 @@
 
 				$('#emptycontent-icon').find('.avatar').each(function () {
 					if (waitingParticipantName && (waitingParticipantId !== waitingParticipantName)) {
-						$(this).avatar(waitingParticipantId, 128, undefined, false, undefined, waitingParticipantName);
+						$(this).avatar(waitingParticipantId, 256, undefined, false, undefined, waitingParticipantName);
 					} else {
-						$(this).avatar(waitingParticipantId, 128);
+						$(this).avatar(waitingParticipantId, 256);
 					}
 				});
 
@@ -599,11 +599,11 @@
 			var avatar = avatarContainer.find('.avatar');
 			var guestName = localStorage.getItem("nick");
 			if (oc_current_user) {
-				avatar.avatar(OC.currentUser, 128);
+				avatar.avatar(OC.currentUser, 256);
 			} else if (guestName) {
-				avatar.imageplaceholder(guestName, undefined, 128);
+				avatar.imageplaceholder(guestName, undefined, 256);
 			} else {
-				avatar.avatar(null, 128);
+				avatar.avatar(null, 256);
 				OC.Notification.showTemporary(t('spreed', 'You can set your name on the top right of this page so other participants can identify you better.'));
 			}
 
@@ -646,9 +646,9 @@
 			var avatar = $('#localVideoContainer').find('.avatar');
 			var savedGuestName = localStorage.getItem("nick");
 			if (savedGuestName) {
-				avatar.imageplaceholder(savedGuestName, undefined, 128);
+				avatar.imageplaceholder(savedGuestName, undefined, 256);
 			} else {
-				avatar.avatar(null, 128);
+				avatar.avatar(null, 256);
 			}
 		},
 		initShareRoomClipboard: function () {
